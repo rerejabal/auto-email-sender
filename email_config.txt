@@ -1,0 +1,4 @@
+RECEIVERS=example@gmail.com,example2@gmail.com
+SEND_TIME=07:00
+TIMEZONE=Asia/Jakarta
+ATTACHMENTS=yourfilename.pdf,yourfilename2.mkv

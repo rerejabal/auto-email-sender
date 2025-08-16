@@ -1,0 +1,54 @@
+Just fill your Timezone into email_config.txt, for example: Asia/Jakarta
+
+🌍 Daftar Timezone Populer (Format IANA / yang dipakai pytz)
+🇮🇩 Indonesia
+
+Asia/Jakarta → WIB (UTC+7)
+
+Asia/Makassar → WITA (UTC+8)
+
+Asia/Jayapura → WIT (UTC+9)
+
+🌏 Asia Lain
+
+Asia/Singapore → Singapura
+
+Asia/Kuala_Lumpur → Malaysia
+
+Asia/Bangkok → Thailand
+
+Asia/Tokyo → Jepang
+
+Asia/Seoul → Korea Selatan
+
+Asia/Dubai → UEA
+
+🌍 Eropa
+
+Europe/London → Inggris (GMT / BST)
+
+Europe/Berlin → Jerman (CET/CEST, UTC+1 / +2)
+
+Europe/Paris → Prancis
+
+Europe/Moscow → Rusia
+
+🌎 Amerika
+
+America/New_York → Eastern Time (EST/EDT, UTC-5 / -4)
+
+America/Chicago → Central Time (CST/CDT, UTC-6 / -5)
+
+America/Denver → Mountain Time (MST/MDT, UTC-7 / -6)
+
+America/Los_Angeles → Pacific Time (PST/PDT, UTC-8 / -7)
+
+America/Toronto → Kanada (Eastern)
+
+America/Sao_Paulo → Brasil
+
+🌏 Lainnya
+
+Australia/Sydney → Sydney (UTC+10 / +11)
+
+Pacific/Auckland → Selandia Baru
