@@ -21,7 +21,8 @@ A simple tool for automated email sending — schedule and send to multiple reci
   - schedule  
   - art  
   - python-dotenv  
-  - pytz  
+  - pytz
+  - rich 
 
 ---
 
@@ -83,7 +84,7 @@ PT. Chang Shin Reksa Jaya
 
 Dear Sir/Madam,
 
-My name is Salma Nurhulaida, and I would like to apply for a position at PT. Chang Shin Reksa Jaya.
+My name is Thomas Alpha Edisound, and I would like to apply for a position at PT. Chang Shin Reksa Jaya.
 I am confident that I can contribute to supporting the company’s vision and mission. Enclosed are my application documents for your consideration.
 
 I sincerely hope for the opportunity to further discuss my qualifications and to contribute to your esteemed company.
@@ -91,7 +92,7 @@ I sincerely hope for the opportunity to further discuss my qualifications and to
 Thank you very much for your attention.
 
 Sincerely,
-Salma Nurhulaida
+Thomas Alpha Edisound
 ```
 - email_config.txt → configuration (recipients, time, timezone, attachments)
 - attachments → place your attachments file
@@ -99,7 +100,7 @@ Salma Nurhulaida
 Example email_config.txt:
 ```
 RECEIVERS=example1@gmail.com,example2@gmail.com,example3@gmail.com
-SEND_TIME=07:20
+SEND_TIME=07:00
 TIMEZONE=Asia/Jakarta
 ATTACHMENTS=CV.pdf,song.mp3,your naked video.mp4
 ```
