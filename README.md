@@ -64,6 +64,7 @@ Change .env file with your email credentials:
 Create one via:
 Google Account → Security → App passwords.
 If its not there, search: App Password.
+Don't use space, example App Password: kjgwxutxzhkyqjkw
 ```
 EMAIL_SENDER=youremail@gmail.com
 EMAIL_PASSWORD=yourapppassword
