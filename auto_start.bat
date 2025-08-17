@@ -1,4 +1,4 @@
 @echo off
-call venv\Scripts\activate
+cd /d %~dp0
 python bot_email.py
 pause
