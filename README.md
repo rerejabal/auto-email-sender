@@ -1,6 +1,6 @@
 # Auto Email Sender
 
-A simple tool for automated email sending — schedule and send to multiple recipients effortlessly.
+A simple tool for automated email sending - schedule and send to multiple recipients effortlessly.
 
 ---
 
@@ -36,6 +36,7 @@ auto-email-sender/
  ├─ email_config.txt
  ├─ requirements.txt
  ├─ timezone_list.txt
+ ├─ auto_start.bat
  ├─ attachments/
  │   ├─ Your file to send 1
  │   ├─ Your file to send 2
@@ -43,40 +44,41 @@ auto-email-sender/
 ```
 ---
 ## ⚙️ Setup
+> Right-click the desired folder location, then select Open in Terminal or PowerShell or even Command Prompt if available.
 
-Clone this repository:
+### 1. Clone this repository on Terminal or PowerShell or Command Prompt:
+
 ```
 git clone https://github.com/rerejabal/auto-email-sender.git
 cd auto-email-sender
 ```
-Activate the virtual environment:
+### 2. Activate the virtual environment:
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
-Install dependency:
+### 3. Install dependency:
 ```
 pip install -r requirements.txt
 ```
-Change .env file with your email credentials:
+### Prepare your files:
+### Modify the `.env` file with your email credentials:
 
-⚠️ Gmail requires an App Password (not your normal password).
-Create one via:
-Google Account → Security → App passwords.
+> ⚠️ Gmail requires an App Password (not your normal password).
+Create one via Google Account → Security → App passwords.
 If its not there, search: App Password.
-Don't use space, example App Password: kjgwxutxzhkyqjkw
+Example of App Password: kjgwxutxzhkyqjkw
 ```
 EMAIL_SENDER=youremail@gmail.com
 EMAIL_PASSWORD=yourapppassword
 ```
-### Prepare your files:
-- email_subject.txt → subject of the email
+### `email_subject.txt` → subject of the email
 
 For example:
 ```
 Job Application
 ```
-- email_body.txt → body of the email
+### `email_body.txt` → body of the email
 
 For example:
 ```
@@ -95,8 +97,8 @@ Thank you very much for your attention.
 Sincerely,
 Thomas Alpha Edisound
 ```
-- email_config.txt → configuration (recipients, time, timezone, attachments)
-- attachments → place your attachments file
+### `email_config.txt` → configuration (recipients, time, timezone, attachments)
+### `attachments` → place your attachments file
 
 Example email_config.txt:
 ```
@@ -108,8 +110,14 @@ ATTACHMENTS=CV.pdf,song.mp3,your naked video.mp4
 
 ---
 ## 🚀 Run the Script
-Once everything is configured properly, start the bot with:
+### Once everything is configured properly, start the bot with:
 ```
 python bot_email.py
 ```
-And if you prefer a simpler way, you can use auto_start.bat file (already provided).
+### If you prefer a simpler way to run, you can run the `auto_start.bat` file provided in the repository.
+
+## 🔄 Update the Script
+### Update your Script when its availabe:
+```
+git pull
+```
