@@ -61,7 +61,7 @@ venv\Scripts\activate
 ```
 pip install -r requirements.txt
 ```
-### Prepare your files:
+### 4. Prepare your files:
 ### Modify the `.env` file with your email credentials:
 
 > ⚠️ Gmail requires an App Password (not your normal password).
@@ -109,7 +109,7 @@ ATTACHMENTS=CV.pdf,song.mp3,your naked video.mp4
 ```
 
 ---
-## 🚀 Run the Script
+## ▶️ Usage
 ### Once everything is configured properly, start the bot with:
 ```
 python bot_email.py
