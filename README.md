@@ -110,14 +110,14 @@ ATTACHMENTS=CV.pdf,song.mp3,your naked video.mp4
 
 ---
 ## ▶️ Usage
-### Once everything is configured properly, start the bot with:
+Once everything is configured properly, start the bot with:
 ```
 python bot_email.py
 ```
-### If you prefer a simpler way to run, you can run the `auto_start.bat` file provided in the repository.
+If you prefer a simpler way to run, you can run the `auto_start.bat` file provided in the repository.
 
 ## 🔄 Update the Script
-### Update your Script when its availabe:
+Update your Script when its availabe:
 ```
 git pull
 ```
