@@ -62,7 +62,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 4. Prepare your files:
-### Modify the `.env` file with your email credentials:
+Modify the `.env` file with your email credentials:
 
 > ⚠️ Gmail requires an App Password (not your normal password).
 Create one via Google Account → Security → App passwords.
@@ -72,13 +72,13 @@ Example of App Password: kjgwxutxzhkyqjkw
 EMAIL_SENDER=youremail@gmail.com
 EMAIL_PASSWORD=yourapppassword
 ```
-### `email_subject.txt` → subject of the email
+`email_subject.txt` → subject of the email
 
 For example:
 ```
 Job Application
 ```
-### `email_body.txt` → body of the email
+`email_body.txt` → body of the email
 
 For example:
 ```
@@ -97,8 +97,8 @@ Thank you very much for your attention.
 Sincerely,
 Thomas Alpha Edisound
 ```
-### `email_config.txt` → configuration (recipients, time, timezone, attachments)
-### `attachments` → place your attachments file
+`email_config.txt` → configuration (recipients, time, timezone, attachments)
+`attachments` → place your attachments file
 
 Example email_config.txt:
 ```
