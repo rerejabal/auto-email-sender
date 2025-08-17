@@ -56,7 +56,7 @@ cd auto-email-sender
 ```
 pip install -r requirements.txt
 ```
-### 4. Prepare your files:
+### 3. Prepare your files:
 Modify the `.env` file with your email credentials:
 
 
