@@ -52,17 +52,13 @@ auto-email-sender/
 git clone https://github.com/rerejabal/auto-email-sender.git
 cd auto-email-sender
 ```
-### 2. Activate the virtual environment:
-```
-python -m venv venv
-venv\Scripts\activate
-```
-### 3. Install dependency:
+### 2. Install dependency:
 ```
 pip install -r requirements.txt
 ```
 ### 4. Prepare your files:
 Modify the `.env` file with your email credentials:
+
 
 > ⚠️ Gmail requires an App Password (not your normal password).
 Create one via Google Account → Security → App passwords.
