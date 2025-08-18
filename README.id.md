@@ -122,6 +122,4 @@ Perbarui script jika tersedia versi baru:
 ```
 git pull
 ```
-```
-
 
