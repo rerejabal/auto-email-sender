@@ -6,22 +6,23 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
-from art import text2art
 from dotenv import load_dotenv
 import os
 import pytz
-from rich.console import Console
 from rich.progress import Progress, BarColumn, TextColumn, TimeRemainingColumn
-from rich.panel import Panel
+from rich.console import Console
+
+# import banner
+from banner_utils import show_banner
 
 console = Console()
 
 # Load .env
 load_dotenv()
-pengirim_email = os.getenv("EMAIL_SENDER")
+sender_email = os.getenv("EMAIL_SENDER")
 password = os.getenv("EMAIL_PASSWORD")
 
-# Fungsi baca subject & body
+# --- Email helper functions ---
 def load_email_content():
     subject, body = "No Subject", "No Body"
     try:
@@ -34,7 +35,6 @@ def load_email_content():
     except: pass
     return subject, body
 
-# Fungsi baca config
 def load_config():
     receivers, send_time, timezone, attachments = [], "07:20", "Asia/Jakarta", []
     try:
@@ -54,51 +54,44 @@ def load_config():
     except: pass
     return receivers, send_time, timezone, attachments
 
-# Fungsi kirim email
-def kirim_email():
+def send_email():
     subject, body = load_email_content()
     receivers, _, _, attachments = load_config()
 
     msg = MIMEMultipart()
-    msg["From"] = pengirim_email
+    msg["From"] = sender_email
     msg["To"] = ", ".join(receivers)
     msg["Subject"] = subject
     msg.attach(MIMEText(body, "plain"))
 
-    # Folder lampiran
     attachments_folder = os.path.join(os.getcwd(), "attachments")
-
-    # Tambahkan lampiran
     for file in attachments:
-        lokasi_file = os.path.join(attachments_folder, file)
-        if os.path.exists(lokasi_file):
+        file_path = os.path.join(attachments_folder, file)
+        if os.path.exists(file_path):
             try:
-                with open(lokasi_file, "rb") as attachment:
+                with open(file_path, "rb") as attachment:
                     part = MIMEBase("application", "octet-stream")
                     part.set_payload(attachment.read())
                     encoders.encode_base64(part)
                     part.add_header("Content-Disposition", f"attachment; filename={file}")
                     msg.attach(part)
             except Exception as e:
-                console.print(f"[red]Gagal melampirkan {file}: {e}[/red]")
+                console.print(f"[red]Failed to attach {file}: {e}[/red]")
         else:
-            console.print(f"[yellow]⚠️ File {file} tidak ditemukan di folder attachments![/yellow]")
+            console.print(f"[yellow]⚠️ File {file} not found in attachments folder![/yellow]")
 
-    # Kirim email
     try:
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login(pengirim_email, password)
-        server.sendmail(pengirim_email, receivers, msg.as_string())
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receivers, msg.as_string())
         server.quit()
-        console.print(f"[green][{datetime.now()}] ✅ Email successfully sent to {', '.join(receivers)}[/green]")
+        console.print(f"[green][{datetime.now()}] ✅ Email sent to {', '.join(receivers)}[/green]")
     except Exception as e:
-        console.print(f"[red]Gagal mengirim email: {e}[/red]")
+        console.print(f"[red]Failed to send email: {e}[/red]")
 
-# Baca config
+# --- Setup ---
 receivers, send_time, timezone, attachments = load_config()
-
-# Setup timezone & target
 local_tz = pytz.timezone(timezone)
 now = datetime.now(local_tz)
 send_hour, send_minute = map(int, send_time.split(":"))
@@ -106,38 +99,35 @@ target = now.replace(hour=send_hour, minute=send_minute, second=0, microsecond=0
 if now > target:
     target = target + timedelta(days=1)
 
-schedule.every().day.at(send_time).do(kirim_email)
+schedule.every().day.at(send_time).do(send_email)
 
-# Banner
-banner = text2art("MYSTIC  BOT  SCRIPT", font="small")
-console.print(Panel(banner, title="📧 Auto Email Sender", style="bold magenta"))
-console.print(f"[cyan]by rerejabal[/cyan]\n")
-console.print(f"[yellow]Email will be automatically sent at: {send_time} ({timezone}).[/yellow]\n")
+# --- Banner (pakai banner_utils) ---
+show_banner(send_time, timezone, title="📧 Auto Email Sender")
 
-# Loop dengan progress bar countdown
+# --- Countdown loop ---
 while True:
     now = datetime.now(local_tz)
     if now > target:
         target = target + timedelta(days=1)
 
-    selisih = target - now
-    total_detik = selisih.seconds
-    jam, sisa = divmod(total_detik, 3600)
-    menit, detik = divmod(sisa, 60)
+    delta = target - now
+    total_seconds = delta.seconds
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
 
     with Progress(
-        TextColumn("⏳ [progress.description]{task.description}"),
+        TextColumn("⏳ Countdown:"),
         BarColumn(),
         TimeRemainingColumn(),
         console=console,
         transient=True,
     ) as progress:
-        task = progress.add_task(f"Countdown {jam:02d}:{menit:02d}:{detik:02d}", total=total_detik)
-        while total_detik > 0:
+        task = progress.add_task(f"{hours:02d}:{minutes:02d}:{seconds:02d}", total=total_seconds)
+        while total_seconds > 0:
             time.sleep(1)
-            total_detik -= 1
+            total_seconds -= 1
             progress.update(task, advance=1)
-            if total_detik == 0:
+            if total_seconds == 0:
                 break
 
     schedule.run_pending()
