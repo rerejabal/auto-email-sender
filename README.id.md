@@ -1,5 +1,5 @@
 #### *Read this in other languages:*  
-[![English](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/United-States.png)](README.md)
+[![English](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/United-Kingdom.png)](README.md)
 [![Bahasa Indonesia](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Indonesia.png)](README.id.md)
 --------
 <img width="1097" height="523" alt="image (1)" src="https://github.com/user-attachments/assets/bc5305e8-7307-4be6-a7cc-582bd5d4dcab" />
@@ -122,6 +122,7 @@ Perbarui script jika tersedia versi baru:
 ```
 git pull
 ```
+
 
 
 
