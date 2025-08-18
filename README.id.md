@@ -1,4 +1,4 @@
-```markdown
+
 # Auto Email Sender
 
 Sebuah alat sederhana untuk mengirim email otomatis - jadwalkan dan kirim ke banyak penerima dengan mudah.
@@ -29,6 +29,7 @@ Sebuah alat sederhana untuk mengirim email otomatis - jadwalkan dan kirim ke ban
 
 ## 📁 Struktur Folder
 auto-email-sender/
+
  ├─ bot_email.py
  ├─ .env
  ├─ email_subject.txt
@@ -110,3 +111,4 @@ Jika ingin lebih mudah, cukup jalankan file `auto_start.bat` yang sudah tersedia
 Perbarui script jika tersedia versi baru:
 git pull
 ```
+
