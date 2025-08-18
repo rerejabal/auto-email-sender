@@ -40,6 +40,7 @@ auto-email-sender/
  ├─ requirements.txt
  ├─ timezone_list.txt
  ├─ auto_start.bat
+ ├─ banner_utils.py
  ├─ attachments/
  │   ├─ Your file to send 1
  │   ├─ Your file to send 2
