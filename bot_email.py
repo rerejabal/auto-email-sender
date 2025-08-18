@@ -86,9 +86,9 @@ def send_email():
         server.login(sender_email, password)
         server.sendmail(sender_email, receivers, msg.as_string())
         server.quit()
-        console.print(f"[green][{datetime.now()}] ✅ Email sent to {', '.join(receivers)}[/green]")
+        console.print(f"[green][{datetime.now()}] ✅ Email sent to {', '.join(receivers)}[/green]\n")
     except Exception as e:
-        console.print(f"[red]Failed to send email: {e}[/red]")
+        console.print(f"[red]Failed to send email: {e}[/red]\n")
 
 # --- Setup ---
 receivers, send_time, timezone, attachments = load_config()

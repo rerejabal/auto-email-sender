@@ -4,7 +4,7 @@ from rich.panel import Panel
 
 console = Console()
 
-def show_banner(send_time=None, timezone=None, title="📧 Auto Email Sender", subtitle="by rerejabal"):
+def show_banner(send_time=None, timezone=None, title="📧 Auto Email Sender", subtitle="by rey-mystic"):
     banner = text2art("          MYSTIC  BOT  SCRIPT", font="small")
     console.print(
         Panel(
