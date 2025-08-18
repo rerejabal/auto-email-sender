@@ -56,7 +56,7 @@ auto-email-sender/
 
 ### 1. Clone repository ini di Terminal / PowerShell / Command Prompt:
 ```
-git clone https://github.com/rerejabal/auto-email-sender.git
+git clone https://github.com/rey-mystic/auto-email-sender.git
 cd auto-email-sender
 ```
 ### 2. Instal dependensi:
@@ -122,4 +122,5 @@ Perbarui script jika tersedia versi baru:
 ```
 git pull
 ```
+
 
