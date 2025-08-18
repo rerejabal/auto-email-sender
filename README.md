@@ -70,8 +70,8 @@ Modify the `.env` file with your email credentials:
 
 
 > ⚠️ Gmail requires an App Password (not your normal password).
-Create one via Google Account → Security → App passwords.
-If its not there, search: App Password.
+Create one via Google Account → Security → App passwords.  
+If its not there, search: App Password.  
 Example of App Password: kjgwxutxzhkyqjkw
 ```
 EMAIL_SENDER=youremail@gmail.com
@@ -102,7 +102,7 @@ Thank you very much for your attention.
 Sincerely,
 Thomas Alpha Edisound
 ```
-`email_config.txt` → configuration (recipients, time, timezone, attachments)
+`email_config.txt` → configuration (recipients, time, timezone, attachments)  
 `attachments` → place your attachments file
 
 Example email_config.txt:
