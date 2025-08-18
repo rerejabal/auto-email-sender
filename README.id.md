@@ -2,7 +2,7 @@
 [![English](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/United-States.png)](README.md)
 [![Bahasa Indonesia](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Indonesia.png)](README.id.md)
 --------
-<img width="1084" height="555" alt="Screenshot 2025-08-18 142912" src="https://github.com/user-attachments/assets/397631c3-e43f-402b-aab7-cbf0b27331b7" />
+<img width="1097" height="523" alt="image (1)" src="https://github.com/user-attachments/assets/bc5305e8-7307-4be6-a7cc-582bd5d4dcab" />
 
 # Auto Email Sender
 
@@ -122,5 +122,6 @@ Perbarui script jika tersedia versi baru:
 ```
 git pull
 ```
+
 
 
