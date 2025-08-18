@@ -1,3 +1,8 @@
+
+#### *Read this in other languages:*  
+[![English](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/United-States.png)](README.md)
+[![Bahasa Indonesia](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Indonesia.png)](README.id.md)
+--------
 <img width="1084" height="555" alt="Screenshot 2025-08-18 142912" src="https://github.com/user-attachments/assets/397631c3-e43f-402b-aab7-cbf0b27331b7" />
 
 
